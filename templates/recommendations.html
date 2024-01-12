@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="max-w-3xl mx-auto mt-10">
+        <h1 class="text-3xl font-bold mb-8">Book Recommendations</h1>
+        <div class="space-y-8">
+            {% for book in recommendations %}
+                <article class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-4">{{ book.title }}</h2>
+                    <p class="text-gray-700">Author: {{ book.author }}</p>
+                    <p class="text-gray-700">Genre: {{ book.genre }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
